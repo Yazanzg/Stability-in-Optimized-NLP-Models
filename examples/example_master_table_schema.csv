@@ -1,0 +1,4 @@
+participant_id,diagnosis,binary_label,split,transcript_path,audio_path
+PROCESS-2_rec__dummy001,HC,0,train,examples/dummy_ctd.txt,examples/dummy.wav
+PROCESS-2_rec__dummy002,MCI,1,train,examples/dummy_ctd.txt,examples/dummy.wav
+PROCESS-2_rec__dummy003,Dementia,1,dev,examples/dummy_ctd.txt,examples/dummy.wav

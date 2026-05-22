@@ -1,33 +1,58 @@
+# Dataset (controlled access — do not commit)
+PROCESS-2/
+process2_hf_downloads/
+metadata.csv
+*.wav
+*.mp3
+*.mp4
+*__CTD.txt
+*__SFT.txt
+*__PFT.txt
+
 # Virtual environments
 .venv/
 .venv311/
 venv/
 
-# Python
+# Python / Jupyter
 __pycache__/
 *.py[cod]
 *.egg-info/
-.pytest_cache/
-.mypy_cache/
-
-# Jupyter
 .ipynb_checkpoints/
+notebooks/
 
-# Dataset and local downloads (controlled access; not redistributed)
-PROCESS-2/
-process2_hf_downloads/
+# Secrets
+.env
+.env.*
+huggingface_token.txt
+**/HF_TOKEN*
+
+# Caches and large artifacts
+.cache/
+*.pkl
+*.joblib
+
+# Legacy local development (not thesis code component)
 data_old/
 Data/
 Archive/
+extract_output.txt
+extract_dementia_outputs.py
+inspect_process2_dataset.ipynb
+inspect_process2_dataset.py
+process2_sample_preview.csv
+*.ipynb
 
-# Legacy development artifacts
+# Legacy outputs (PROCESS-2 staged outputs are committed instead)
 outputs/features.csv
-outputs/baseline_results.csv
-outputs/optimized_results.csv
 outputs/shuffled_label_results.csv
-outputs/shap_values_*.csv
+outputs/shap_values_baseline.csv
+outputs/shap_values_optimized.csv
 outputs/stability_results.csv
 outputs/last_run.log
+outputs/figures/performance_comparison.png
+outputs/figures/stability_comparison.png
+outputs/figures/tradeoff_auroc_stability.png
 
 # IDE / OS
 .idea/
@@ -35,6 +60,4 @@ outputs/last_run.log
 .DS_Store
 Thumbs.db
 
-# Logs and scratch
-*.log
-extract_output.txt
+# Optional: keep only committed thesis outputs; ignore re-generated duplicates if desired locally
